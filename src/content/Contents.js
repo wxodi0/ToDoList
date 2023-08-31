@@ -1,22 +1,28 @@
 import React from "react";
 import styled from 'styled-components';
 import Clock from './Clock';
+import Todo from './Todo';
 
 const Contents= () => {
   return (
     <Container>
-      <Clock></Clock>
+      <Clock/>
+      <Todo/>
     </Container>
   )
 };
-
 const Container = styled.div`
-  position : absolute;
+  position: absolute;
   right: 0;
-  top : 30px;
-  width : 480px;
-  height : calc(100% - 33px);
-  color : white;
-`
+  top: 33px;
+  width: 500px;
+  height: calc(100% - 33px);
+  color: white;
+  overflow : auto;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
 
 export default Contents;
