@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import styled from 'styled-components';
+import Content from './Contents';
 
 class App extends React.Component {
   state = {
@@ -10,11 +11,12 @@ class App extends React.Component {
   render(){
     return (
       <Container query={this.state.query}>
-      <Input placeholder='테마를 입력하세요' onKeyPress={this.handleInputKeyPress}></Input>
+      <Input placeholder='테마를 입력하세요' onKeyPress={this.handleInputKeyPress}/>
+      <Content/>
       </Container>
-    )  
+    )
   }
-  
+
   handleInputKeyPress = e => {
     if(e.key === 'Enter'){
       this.setState({
